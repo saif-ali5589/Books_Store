@@ -1,0 +1,21 @@
+</<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'contact_person_css.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <div class="head">
+      <h1>Books</h1>
+    </div>
+    {% for i in d%}
+    <img src="{{i.img.url}}"></img>
+    <h3>{{i.title}}</h3>
+    <h3>{{i.desc}}</h3>
+    <h3>{{i.owner}}</h3>
+    <h3>{{i.Contact}}</h3>
+    {% endfor %}
+  </body>
+</html>

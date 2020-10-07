@@ -1,0 +1,40 @@
+<!doctype html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'Books_Store_css.css' %}">
+    <title></title>
+  </head>
+  <body>
+
+<div class="topnav">
+  <a href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+  <a href="{% url 'type_book' pk="Islamic" %}">Islamic</a>
+  <a href="{% url 'type_book' pk="Novel" %}">Novel</a>
+  <a href="{% url 'type_book' pk="Twelth_Class" %}">12 class</a>
+  <a href="{% url 'type_book' pk="Eleven_Class" %}">11 class</a>
+  <a href="{% url 'type_book' pk="Tenth_Class" %}">10 class</a>
+  <a href="{% url 'type_book' pk="Nineth_Class" %}">9 class</a>
+  <a href="{% url 'type_book' pk="Common" %}">Common</a>
+</div>
+
+{% for i in data %}
+<div class="responsive">
+  <div class="gallery">
+      <a href="{% url 'contact_person' pk=i.id %}">
+        <img src="{{i.img.url}}" alt="Mountains" style="width:200px;height:200px;">
+
+      </a>
+<div class="desc">Title  :- {{i.title}}</div>
+  </div>
+</div>
+  {% endfor %}
+
+
+  </body>
+</html>

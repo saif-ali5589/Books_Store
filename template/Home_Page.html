@@ -1,0 +1,33 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="{% static 'Home_Page_css.css' %}">
+    <title>Geeks</title>
+  </head>
+  <body>
+
+  <div class="head"style="color:blue;">
+  <h1 style="text-align:center;">Humari Library</h1><br>
+  <div class="head" >
+  <ul>
+  <li><a href="{% url "home" %}">Home</a></li>
+  <li><a href="{% url "Book_page" %}">Books</a></li>
+  <li><a href="{% url "Contact" %}">Contact</a></li>
+
+  </ul>
+  </div>
+<img src="{% static "background_image.jpg" %}" alt="img" style="width:100%;height:auto;">
+  </div>
+
+  <div class="Qouts">
+
+  <p style="font-size:50px;text-shadow : 2px 2px 4px;color: green;font-family:Times New Roman">Knowledge and wisdom are really the privilege of a faithful Muslim.<br>
+  If you have lost them, get them back even though you may have to get them from the apostates.<br></p>
+  </div>
+  </body>
+</html>
